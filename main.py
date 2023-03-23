@@ -197,6 +197,19 @@ def swap_minimization(original_graph, work_graph, cycles):
                  alpha_beta_swap(labels[i], labels[j], work_graph, original_graph)
                 # user output and interims result image
 
+# def swap_minimization_modified(original_graph, work_graph, division_point, cycles):
+#     values = list(work_graph.values())
+#     sf_labels = list(set(value[0] for value in values[:division_point]))
+#     sb_labels = list(set(value[0] for value in values[division_point:]))
+#     #labels = list(set(value[0] for value in work_graph.values()))
+#
+#     for u in range(0, cycles):
+#         for i in range(len(sf_labels)):
+#             for j in range(len(sb_labels)):
+#                 if(sf_labels[i]!=sb_labels[j]):
+#                     alpha_beta_swap(sf_labels[i], sb_labels[j], work_graph, original_graph)
+#                 # user output and interims result image
+
 def update_image(graph, sf, image, background):
     for i in range(len(sf)):
         sf[i][1] = graph[i][0]
